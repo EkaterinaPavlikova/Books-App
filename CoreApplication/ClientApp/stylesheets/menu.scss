@@ -1,0 +1,138 @@
+nav.main-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(45, 70, 95);
+    color: #f8f8ff;
+    // height: 100%;
+    width: 20%;
+    min-width: 20%;
+}
+
+.main-nav li .glyphicon {
+    margin-right: 10px;
+}
+
+.main-nav li .fa {
+    margin-right: 10px;
+}
+
+
+/* Highlighting rules for nav menu items */
+
+.main-nav li a.active,
+.main-nav li a.active:hover,
+.main-nav li a.active:focus {
+    background-color: #4189C7;
+    color: white;
+}
+
+
+/* Keep the nav menu independent of scrolling and on top of other items */
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.search-field {
+    background: #b1e1ed;
+    padding: 30px 0
+}
+
+.search-field input {
+    width: 100%;
+    height: 42px;
+    padding-left: 10px;
+    border: 2px solid #73b8c4;
+    border-radius: 5px;
+    outline: none;
+    background: #e8f8fc;
+    color: #9E9C9C;
+}
+
+.search-field button {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: #73b8c4;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-field button:before {
+    font-size: 16px;
+    color: #F9F0DA;
+}
+
+#searchingForm {
+    position: relative;
+    width: 360px;
+    margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
+    body {
+        padding-top: 50px;
+    }
+}
+
+@media (min-width: 900px) {
+    /* On small screens, convert the nav menu to a vertical sidebar */
+    .main-nav {
+        height: 100%;
+        width: inherit;
+    }
+    .main-nav .navbar {
+        border-radius: 0px;
+        border-width: 0px;
+        height: 100%;
+    }
+    .main-nav .navbar-header {
+        float: none;
+    }
+    .main-nav .navbar-collapse {
+        border-top: 1px solid #444;
+        padding: 0px;
+    }
+    .main-nav .navbar ul {
+        float: none;
+    }
+    .main-nav .navbar li {
+        float: none;
+        font-size: 15px;
+        margin: 6px;
+    }
+    .main-nav .navbar li a {
+        padding: 10px 16px;
+        border-radius: 4px;
+    }
+    .main-nav .navbar a {
+        /* If a menu item's text is too long, truncate it */
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.onprosess-block {
+    width: 35%;
+}
+
+.user-blocks div {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.orders-block {
+    margin-left: 2% !important;
+}
